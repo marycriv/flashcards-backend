@@ -7,13 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "begin seeding"
-# User.destroy_all
-# Card.destroy_all
-# CardFlip.destroy_all
+User.destroy_all
+Card.destroy_all
+CardFlip.destroy_all
 u1 = User.create(name: "maeri")
 
 c1 = Card.create(front: "bepis", back: "master")
 
-cf1 = CardFlip.create(user_id: u1.id, card_id: c1.id)
+cf1 = CardFlip.create(user_id: u1.id, card_id: c1.id, color: "green")
 
 puts "end seeding"
