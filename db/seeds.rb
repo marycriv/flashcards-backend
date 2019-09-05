@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "begin seeding"
+User.destroy_all
+Card.destroy_all
+CardFlip.destroy_all
+u1 = User.new(name: "maeri")
+
+c1 = Card.new(front: "bepis", back: "master")
+
+cf1 = CardFlip.new(user_id: u1.id, card_id: c1.id)
+
+puts "end seeding"
